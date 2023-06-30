@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
 import { ContainerStat, Item, TitleSpan, ValueSpan } from './Statistics.styled';
 
-const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
+export default function Statistics({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) {
   return (
     <ContainerStat>
       <Item>
@@ -26,7 +32,7 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
       </Item>
     </ContainerStat>
   );
-};
+}
 
 Statistics.propTypes = {
   good: PropTypes.number.isRequired,
@@ -35,5 +41,3 @@ Statistics.propTypes = {
   total: PropTypes.number.isRequired,
   positivePercentage: PropTypes.number.isRequired,
 };
-
-export default Statistics;

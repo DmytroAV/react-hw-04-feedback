@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContainerBtn = styled.form`
+export const FormFeedback = styled.form`
   display: grid;
   grid-template-columns: repeat(3, 100px);
   justify-content: space-around;

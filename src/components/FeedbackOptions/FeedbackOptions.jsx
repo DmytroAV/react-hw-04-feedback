@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import { ContainerBtn, Button } from './FeedbackOptions.styled';
+import { FormFeedback, Button } from './FeedbackOptions.styled';
 
-function FeedbackOptions({ onLeaveFeedback }) {
+export default function FeedbackOptions({ onChange }) {
   return (
     <>
-      <ContainerBtn onClick={onLeaveFeedback}>
+      <FormFeedback onClick={onChange}>
         <Button type="button" name="good">
           Good
         </Button>
@@ -14,13 +14,11 @@ function FeedbackOptions({ onLeaveFeedback }) {
         <Button type="button" name="bad">
           Bad
         </Button>
-      </ContainerBtn>
+      </FormFeedback>
     </>
   );
 }
 
 FeedbackOptions.propTypes = {
-  onLeaveFeedback: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
-
-export default FeedbackOptions;
